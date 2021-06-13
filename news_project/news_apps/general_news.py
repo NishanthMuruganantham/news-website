@@ -25,3 +25,8 @@ def general_news(news_category):
     
     else:
         abort(404)
+
+
+@general.route("/sports")
+def select_sports():
+    return render_template("sports_home.html")
