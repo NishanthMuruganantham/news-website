@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>India News</title>
+</head>
+
+<body>
+    <!-- header -->
+    {% extends "layout.html" %}
+    <!-- {% set active_page = request.endpoint %} -->
+    {% block content %}
+    <div class="w3l-homeblock2 py-5">
+        <div class="container pt-md-4 pb-md-5">
+            <h3 class="category-title mb-3">India News</h3>
+            <p class="mb-sm-5 mb-4 max-width">News happenings in India</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card" 
+                    style = "border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    "
+                    >
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/football.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                                    
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Football
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/cricket3.jpg')}}""
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Cricket
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/tennis1.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details" >
+                            <a href="#blog-single.html" class="blog-desc">
+                                Tennis
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/Formula1.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Formula 1
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/hockey.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Hockey
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/golf.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Golf
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/badminton.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Badminton
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/chess.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Chess
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/kabaddi.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Kabaddi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/wrestling.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Wrestling
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/nba.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                NBA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
+                    <div class="card" style="border: 1px solid #5a67d8;
+                    border-bottom-left-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    text-align:center;
+                    ">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog-single.html">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                    src = "{{url_for('static',filename = 'assets/images/boxing.jpg')}}"
+                                    alt = "Card image cap" height = "220">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="#blog-single.html" class="blog-desc">
+                                Boxing
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
