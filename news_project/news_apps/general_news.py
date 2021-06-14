@@ -30,3 +30,25 @@ def general_news(news_category):
 @general.route("/sports")
 def select_sports():
     return render_template("sports_home.html")
+
+@general.route("/sports/<sport_name>",methods=["GET", "POST"])
+def sports_news(sport_name):
+    uri = f"https://ndtvnews-api.herokuapp.com/sports?sport=values({sport_name})"
+    print(uri)
+    news_list = fetch_general_news(uri)
+    if len(news_list) != 0:
+        try:
+            page = int(request.args.get("page", 1))
+        except ValueError:
+            page = 1
+        
+        separated_news_list, pagination = paginate(news_list = news_list, current_page = page, per_page = 9)
+        print(separated_news_list)
+        return render_template(
+            "sports.html", news_list = separated_news_list, pagination = pagination,
+            options = ["cricket","football","tennis","formula-1","hockey","golf","badminton","chess","kabaddi","wrestling","nba","boxing"],
+            page_title = sport_name
+        )
+    
+    else:
+        abort(404)

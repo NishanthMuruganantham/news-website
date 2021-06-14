@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{url_for('static',filename = 'assets/css/style-starter.css')}}">
+    <!-- CSS for select option from bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
 
 </head>
 
@@ -68,10 +70,11 @@
                         <li class="nav-item {{'active' if request.path == '/offbeat' else ''}}">
                             <a class="nav-link" href="{{url_for('general.general_news',news_category= 'offbeat')}}">Offbeats</a>
                         </li>
-                        <li class="nav-item dropdown @@pages__active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Cities <span class="fa fa-angle-down"></span>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                href="{{url_for('general.select_sports')}}">
+                                Citie <span class="fa fa-angle-down"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item @@b__active" href="{{url_for('general.general_news',news_category= 'india')}}">India</a>
@@ -241,11 +244,19 @@
             }
         })
         })
+        
     </script>
-    
-        <!-- //script for testimonials -->
-    
-        <!-- bootstrap -->
+    <!-- bootstrap -->
     <script src="{{url_for('static',filename = 'assets/js/bootstrap.min.js')}}"></script>
+
+    <!-- js for selct option -->
+    <script src="https://kit.fontawesome.com/577845f6a5.js" 
+        
+        crossorigin="anonymous">
+    </script>
+    <!-- Optional JavaScript -->
+    
+    <script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
