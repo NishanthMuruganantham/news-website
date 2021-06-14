@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>NewsBlog a Blog Category Bootstrap Responsive Website Template | Home : W3layouts</title>
+
+    <link href="//fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename = 'assets/css/style-starter.css')}}">
+    <!-- CSS for select option from bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+
+</head>
+
+
+<body>
+    <header class="w3l-header">
+        <div class="container">
+        <!--/nav-->
+        <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
+                <a class="navbar-brand" href="index.html">
+                    <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+                <!-- if logo is image enable this   
+                            <a class="navbar-brand" href="#index.html">
+                                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                            </a> -->
+    
+                
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="fa icon-expand fa-bars"></span>
+                    <span class="fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                    <ul class="navbar-nav">
+                        <li class="nav-item {{'active' if request.url_rule == '/index' else ''}}">
+                            <a class="nav-link" href="{{url_for('core.index')}}">Home</a>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/latest' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.general_news',news_category= 'latest')}}">Latest</a>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/india' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.general_news',news_category= 'india')}}">India</a>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/world' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.general_news',news_category= 'world')}}">World</a>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/entertainment' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.general_news',news_category= 'entertainment')}}">Entertainment</a>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/science' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.general_news',news_category= 'science')}}">Science</a>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/business' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.general_news',news_category= 'business')}}">Business</a>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/offbeat' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.general_news',news_category= 'offbeat')}}">Offbeats</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                href="{{url_for('general.select_sports')}}">
+                                Citie <span class="fa fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item @@b__active" href="{{url_for('general.general_news',news_category= 'india')}}">India</a>
+                            </div>
+                        </li>
+                        <li class="nav-item {{'active' if request.path == '/offbeat' else ''}}">
+                            <a class="nav-link" href="{{url_for('general.select_sports')}}">Sports</a>
+                        </li>
+                        <li class="nav-item @@contact__active">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </div>
+        </nav>
+        <!--//nav-->
+    </header>
+
+
+
+    {% block content%}
+    {% endblock %}
+
+
+
+    <!-- footer-28 block -->
+    <section class="app-footer">
+        <footer class="footer-28 py-5">
+            <div class="footer-bg-layer">
+                <div class="container py-lg-3">
+                    <div class="row footer-top-28">
+                        <div class="col-lg-4 footer-list-28 copy-right mb-lg-0 mb-sm-5 mt-sm-0 mt-4">
+                        <a class="navbar-brand mb-3" href="index.html">
+                            <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+                        <p class="copy-footer-28"> © 2020. All Rights Reserved. </p>
+                        <h5 class="mt-2">Design by <a href="https://w3layouts.com/">W3Layouts</a></h5>
+                        </div>
+                        <div class="col-lg-8 row">
+                            <div class="col-sm-4 col-6 footer-list-28">
+                                <h6 class="footer-title-28">Useful links</h6>
+                                <ul>
+                                <li><a href="#categories">food blogs</a></li>
+                                <li><a href="#advertise">Advertise with us</a></li>
+                                <li><a href="#authors">Our Authors</a></li>
+                                <li><a href="contact.html">Get in touch</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 col-6 footer-list-28">
+                                <h6 class="footer-title-28">Categories</h6>
+                                <ul>
+                                <li><a href="beauty.html">Beauty</a></li>
+                                <li><a href="fashion.html">Fashion and Style</a></li>
+                                <li><a href="#food"> Food and Wellness</a></li>
+                                <li><a href="#lifestyle">Lifestyle</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 col-6 footer-list-28 mt-sm-0 mt-4">
+                                <h6 class="footer-title-28">Social Media</h6>
+                                <ul class="social-icons">
+                                <li class="facebook">
+                                    <a href="#facebook"><span class="fa fa-facebook"></span> Facebook</a></li>
+                                <li class="twitter"> <a href="#twitter"><span class="fa fa-twitter"></span> Twitter</a></li>
+                                <li class="linkedin"> <a href="#linkedin"><span class="fa fa-linkedin"></span> Linkedin</a></li>
+                                <li class="dribbble"><a href="#dribbble"><span class="fa fa-dribbble"></span> Dribbble</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+        </button>
+
+    </section>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+            } else {
+            document.getElementById("movetop").style.display = "none";
+            }
+        }
+    
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <!-- /move top -->
+        </section>
+        <!-- //footer-28 block -->
+    
+        <!-- disable body scroll which navbar is in active -->
+        <script>
+        $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+        });
+        </script>
+        <!-- disable body scroll which navbar is in active -->
+    
+        <!-- Template JavaScript -->
+        <script src="{{url_for('static',filename = 'assets/js/jquery-3.3.1.min.js')}}"></script>
+    
+        <!-- theme changer js -->
+        <script src="{{url_for('static',filename = 'assets/js/theme-change.js')}}"></script>
+        <!-- //theme changer js -->
+    
+        <!-- courses owlcarousel -->
+        <script src="{{url_for('static',filename = 'assets/js/owl.carousel.js')}}"></script>
+    
+        <!-- script for testimonials -->
+        <script>
+        $(document).ready(function () {
+        $('.owl-testimonial').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            480: {
+                items: 1,
+                nav: false
+            },
+            667: {
+                items: 1,
+                nav: true
+            },
+            1000: {
+                items: 1,
+                nav: true
+            }
+            }
+        })
+        })
+        
+    </script>
+    <!-- bootstrap -->
+    <script src="{{url_for('static',filename = 'assets/js/bootstrap.min.js')}}"></script>
+
+    <!-- js for selct option -->
+    <script src="https://kit.fontawesome.com/577845f6a5.js" 
+        
+        crossorigin="anonymous">
+    </script>
+    <!-- Optional JavaScript -->
+    
+    <script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
