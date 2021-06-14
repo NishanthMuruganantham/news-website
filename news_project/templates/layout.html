@@ -27,7 +27,7 @@
         <div class="container">
         <!--/nav-->
         <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{url_for('core.index')}}">
                     <span class="fa fa-newspaper-o"></span> NewsBlog</a>
                 <!-- if logo is image enable this   
                             <a class="navbar-brand" href="#index.html">
@@ -38,7 +38,6 @@
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
                     <span class="fa icon-expand fa-bars"></span>
                     <span class="fa icon-close fa-times"></span>
                 </button>
@@ -70,18 +69,11 @@
                         <li class="nav-item {{'active' if request.path == '/offbeat' else ''}}">
                             <a class="nav-link" href="{{url_for('general.general_news',news_category= 'offbeat')}}">Offbeats</a>
                         </li>
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                href="{{url_for('general.select_sports')}}">
-                                Citie <span class="fa fa-angle-down"></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item @@b__active" href="{{url_for('general.general_news',news_category= 'india')}}">India</a>
-                            </div>
-                        </li>
-                        <li class="nav-item {{'active' if request.path == '/offbeat' else ''}}">
+                        <li class="nav-item {{'active' if '/sports' in request.path else ''}}">
                             <a class="nav-link" href="{{url_for('general.select_sports')}}">Sports</a>
+                        </li>
+                        <li class="nav-item {{'active' if '/cities' in request.path else ''}}">
+                            <a class="nav-link" href="{{url_for('general.city_news')}}">Cities</a>
                         </li>
                         <li class="nav-item @@contact__active">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -102,10 +94,8 @@
                         </div>
                     </nav>
                 </div>
-                <!-- //toggle switch for light and dark theme -->
             </div>
         </nav>
-        <!--//nav-->
     </header>
 
 
@@ -161,12 +151,10 @@
                 </div>
             </div>
         </footer>
-
     <!-- move top -->
         <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fa fa-angle-up"></span>
         </button>
-
     </section>
     <script>
         // When the user scrolls down 20px from the top of the document, show the button

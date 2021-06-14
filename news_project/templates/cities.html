@@ -17,7 +17,7 @@
 
             <!-- <p class="mb-sm-5 mb-4 max-width">News happenings in India</p> -->
             <hr>
-            <select class="custom-select" style="width:150px;" onchange="javascript:location.href = this.value;" >fef
+            <select class="custom-select" style="width:150px;" onchange="javascript:location.href = this.value;" >
                 <option value>Select City</option>
                 {% for option in options %}
                     <option value="{{url_for('general.city_news',city_name= option)}}">{{option.capitalize()}}</option>
