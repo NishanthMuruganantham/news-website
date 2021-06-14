@@ -52,3 +52,60 @@ def sports_news(sport_name):
     
     else:
         abort(404)
+
+@general.route("/cities/<city_name>",methods=["GET", "POST"])
+def city_news(city_name):
+    uri = f"https://ndtvnews-api.herokuapp.com/cities?city=values({city_name})"
+    print(uri)
+    news_list = fetch_general_news(uri)
+    if len(news_list) != 0:
+        try:
+            page = int(request.args.get("page", 1))
+        except ValueError:
+            page = 1
+        
+        separated_news_list, pagination = paginate(news_list = news_list, current_page = page, per_page = 9)
+        print(separated_news_list)
+        return render_template(
+            "sports.html", news_list = separated_news_list, pagination = pagination,
+            options = [
+                    "agra",
+                    "ahmedabad",
+                    "allahabad",
+                    "amritsar",
+                    "aurangabad",
+                    "bangalore",
+                    "bhopal",
+                    "bhubaneshwar",
+                    "chandigarh",
+                    "chennai",
+                    "delhi",
+                    "ghaziabad",
+                    "goa",
+                    "gurgaon",
+                    "guwahati",
+                    "hyderabad",
+                    "jaipur",
+                    "jammu",
+                    "kanpur",
+                    "kolkata",
+                    "lucknow",
+                    "ludhiana",
+                    "meerut",
+                    "mumbai",
+                    "muzaffarnagar",
+                    "muzaffarpur",
+                    "nagpur",
+                    "noida",
+                    "others",
+                    "patna",
+                    "pune",
+                    "srinagar",
+                    "surat",
+                    "thiruvananthapuram"
+                ],
+            page_title = city_name
+        )
+    
+    else:
+        abort(404)
