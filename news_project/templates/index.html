@@ -64,7 +64,7 @@
     <div class="container py-md-4">
         <div class="grids-area-hny main-cont-wthree-fea row">
             <div class="col-lg-3 col-6 grids-feature">
-                <a href="{{url_for('general.general_news',news_category= 'science')}}">
+                <a href="{{url_for('general.general_news',news_category= 'science')}}" target = "_blank">
                     <div class="area-box">
                         <span class="fa">
                             <span class="material-icons">
@@ -76,7 +76,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-6 grids-feature">
-                <a href="{{url_for('general.general_news',news_category= 'business')}}">
+                <a href="{{url_for('general.general_news',news_category= 'business')}}" target = "_blank">
                     <div class="area-box">
                         <span class="fa">
                             <span class="material-icons">
@@ -88,7 +88,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                <a href="#food">
+                <a href="{{url_for('general.select_sports')}}" target = "_blank">
                     <div class="area-box">
                         <!-- <span class="fa fa-trophy"></span> -->
                         <span class="fa">
@@ -100,7 +100,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                <a href="{{url_for('general.general_news',news_category= 'offbeat')}}">
+                <a href="{{url_for('general.general_news',news_category= 'offbeat')}}" target = "_blank">
                     <div class="area-box">
                         <span class="fa fa-bicycle"></span>
                         <h4 class="title-head">Offbeats</h4>
@@ -268,35 +268,80 @@
             <div class="col-lg-4 trending mt-lg-0 mt-5">
                 <div class="topics">
                     <h3 class="section-title-left mb-4"> Topics</h3>
-                    <a href="beauty.html" class="topics-list">
+                    
+                    <a href="#lifestyle" class="topics-list mt-3">
                         <div class="list1">
-                            <span class="fa fa-bath"></span>
-                            <h4>Beauty</h4>
+                            <span class="fa">
+                                <span class="material-icons">
+                                    article
+                                    </span>
+                            </span>
+                            <h4>Latest</h4>
                         </div>
                     </a>
                     <a href="fashion.html" class="topics-list mt-3">
                         <div class="list1">
-                            <span class="fa fa-female"></span>
-                            <h4>Fashion and style</h4>
+                            <span class = "fa">IN</span>
+                            <h4>India</h4>
+                        </div>
+                    </a>
+                    <a href="fashion.html" class="topics-list mt-3">
+                        <div class="list1">
+                            <span class="fa">
+                                <span class="material-icons">
+                                    public
+                                    </span>
+                            </span>
+                            <h4>World</h4>
                         </div>
                     </a>
                     <a href="#food" class="topics-list mt-3">
                         <div class="list1">
-                            <span class="fa fa-cutlery"></span>
-                            <h4>Food and wellness</h4>
+                            <span class="fa">
+                                <span class="material-icons">
+                                    science
+                                    </span>
+                            </span>
+                            <h4>Science</h4>
                         </div>
                     </a>
                     <a href="#lifestyle" class="topics-list mt-3">
                         <div class="list1">
-                            <span class="fa fa-pie-chart"></span>
-                            <h4>Lifestyle</h4>
+                            <span class="fa">
+                                <span class="material-icons">
+                                    business_center
+                                    </span>
+                            </span>
+                            <h4>Business</h4>
                         </div>
                     </a>
-                </div>
-                <div class="sponsers mt-5">
-                    <h3 class="section-title-left mb-4"> Our sponsers</h3>
-                    <a href="#ad-banner"><img src="{{url_for('static',filename = 'assets/images/ad.jpg')}}" alt="" class="img-fluid radius-image-full" /></a>
-                    <a href="#advertise" class="text-center d-block text-uppercase">Advertise with us </a>
+                    <a href="#lifestyle" class="topics-list mt-3">
+                        <div class="list1">
+                            <span class="fa">
+                                <span class="fa">
+                                    <span class="material-icons">
+                                        movie
+                                        </span></span>
+                            </span>
+                            <h4>Entertainment</h4>
+                        </div>
+                    </a>
+                    
+                    <a href="#lifestyle" class="topics-list mt-3">
+                        <div class="list1">
+                            <span class="fa">
+                                <span class="material-icons">
+                                    sports_cricket
+                                    </span></span>
+                            <h4>Sports</h4>
+                        </div>
+                    </a>
+                    <a href="#lifestyle" class="topics-list mt-3">
+                        <div class="list1">
+                            <span class="fa fa-bicycle"></span>
+                            <h4>Offbeats</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
