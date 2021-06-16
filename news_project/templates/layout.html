@@ -8,9 +8,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>NewsBlog a Blog Category Bootstrap Responsive Website Template | Home : W3layouts</title>
-
     <link href="//fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,22 +15,17 @@
     <link rel="stylesheet" href="{{url_for('static',filename = 'assets/css/style-starter.css')}}">
     <!-- CSS for select option from bootstrap -->
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
-
 </head>
-
 
 <body>
     <header class="w3l-header">
         <div class="container">
-        <!--/nav-->
-        <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
-                <a class="navbar-brand" href="{{url_for('core.index')}}">
-                    <span class="fa fa-newspaper-o"></span> NewsBlog</a>
-                <!-- if logo is image enable this   
-                            <a class="navbar-brand" href="#index.html">
-                                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                            </a> -->
-    
+            <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
+                <a href="{{url_for('core.index')}}">
+                    <img src="{{url_for('static',filename = 'assets/images/icons8-news-64.png')}}" alt="News19" title="News19" style="height:35px;padding-right: 4px;"/>
+                </a>
+                
+                <a class="navbar-brand" href="{{url_for('core.index')}}">News 19</a>
                 
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -43,7 +35,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    
                     <ul class="navbar-nav">
                         <li class="nav-item {{'active' if request.path == '/' else ''}}">
                             <a class="nav-link" href="{{url_for('core.index')}}">Home</a>
@@ -76,7 +67,7 @@
                             <a class="nav-link" href="{{url_for('general.city_news')}}">Cities</a>
                         </li>
                         <li class="nav-item @@contact__active">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -94,16 +85,12 @@
                         </div>
                     </nav>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
-
-
 
     {% block content%}
     {% endblock %}
-
-
 
     <!-- footer-28 block -->
     <section class="app-footer">
@@ -112,38 +99,46 @@
                 <div class="container py-lg-3">
                     <div class="row footer-top-28">
                         <div class="col-lg-4 footer-list-28 copy-right mb-lg-0 mb-sm-5 mt-sm-0 mt-4">
-                        <a class="navbar-brand mb-3" href="index.html">
-                            <span class="fa fa-newspaper-o"></span> NewsBlog</a>
-                        <p class="copy-footer-28"> © 2020. All Rights Reserved. </p>
-                        <h5 class="mt-2">Design by <a href="https://w3layouts.com/">W3Layouts</a></h5>
+                            <a href="{{url_for('core.index')}}">
+                                <img src="{{url_for('static',filename = 'assets/images/icons8-news-64.png')}}" alt="News19 logo" title="News19 logo" style="height:35px;padding-right: 4px;"/>
+                            </a>
+                            
+                            <a class="navbar-brand mb-3" href="{{url_for('core.index')}}">News 19</a>
+                            <p class="copy-footer-28"> © 2020. All Rights Reserved. </p>
+                            <h5 class="mt-2">Developed by <a href="https://github.com/NishanthMuruganantham" target = "_blank">Nishanth</a></h5>
                         </div>
                         <div class="col-lg-8 row">
                             <div class="col-sm-4 col-6 footer-list-28">
                                 <h6 class="footer-title-28">Useful links</h6>
                                 <ul>
-                                <li><a href="#categories">food blogs</a></li>
-                                <li><a href="#advertise">Advertise with us</a></li>
-                                <li><a href="#authors">Our Authors</a></li>
-                                <li><a href="contact.html">Get in touch</a></li>
+                                    <li><a href="https://www.ndtv.com/">News Source</a></li>
+                                    <li><a href="https://ndtvnews-api.herokuapp.com">API used</a></li>
+                                    <li><a href="https://github.com/NishanthMuruganantham">Developer</a></li>
+                                    <li><a href="#">Source Code</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-4 col-6 footer-list-28">
                                 <h6 class="footer-title-28">Categories</h6>
                                 <ul>
-                                <li><a href="beauty.html">Beauty</a></li>
-                                <li><a href="fashion.html">Fashion and Style</a></li>
-                                <li><a href="#food"> Food and Wellness</a></li>
-                                <li><a href="#lifestyle">Lifestyle</a></li>
+                                    <li><a href="{{url_for('general.general_news',news_category= 'latest')}}" target = "_blank">Latest</a></li>
+                                    <li><a href="{{url_for('general.general_news',news_category= 'india')}}" target = "_blank">India</a></li>
+                                    <li><a href="{{url_for('general.general_news',news_category= 'world')}}" target = "_blank"> World</a></li>
+                                    <li><a href="{{url_for('general.general_news',news_category= 'science')}}" target = "_blank">Science</a></li>
+                                    <li><a href="{{url_for('general.general_news',news_category= 'business')}}" target = "_blank">Business</a></li>
+                                    <li><a href="{{url_for('general.general_news',news_category= 'entertainment')}}" target = "_blank">Entertainment</a></li>
+                                    <li><a href="{{url_for('general.general_news',news_category= 'offbeat')}}" target = "_blank">Offbeats</a></li>
+                                    <li><a href="{{url_for('general.select_sports')}}" target = "_blank"> Sports</a></li>
+                                    <li><a href="{{url_for('general.city_news')}}" target = "_blank">Cities</a></li>
                                 </ul>
+                                
                             </div>
                             <div class="col-sm-4 col-6 footer-list-28 mt-sm-0 mt-4">
                                 <h6 class="footer-title-28">Social Media</h6>
                                 <ul class="social-icons">
-                                <li class="facebook">
-                                    <a href="#facebook"><span class="fa fa-facebook"></span> Facebook</a></li>
-                                <li class="twitter"> <a href="#twitter"><span class="fa fa-twitter"></span> Twitter</a></li>
-                                <li class="linkedin"> <a href="#linkedin"><span class="fa fa-linkedin"></span> Linkedin</a></li>
-                                <li class="dribbble"><a href="#dribbble"><span class="fa fa-dribbble"></span> Dribbble</a></li>
+                                    <li class="facebook"> <a href="#facebook"><span class="fa fa-facebook"></span> Facebook</a></li>
+                                    <li class="twitter">  <a href="#twitter"><span class="fa fa-twitter"></span> Twitter</a></li>
+                                    <li class="linkedin"> <a href="#linkedin"><span class="fa fa-linkedin"></span> Linkedin</a></li>
+                                    <li class="dribbble"> <a href="#dribbble"><span class="fa fa-dribbble"></span> Dribbble</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -153,9 +148,11 @@
         </footer>
     <!-- move top -->
         <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fa fa-angle-up"></span>
+            <span class="fa fa-angle-up"></span>
         </button>
     </section>
+<!-- JAVASCRIPT PART -->
+
     <script>
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
@@ -175,33 +172,32 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-        </script>
-        <!-- /move top -->
-        </section>
-        <!-- //footer-28 block -->
+
+    </script>
+
     
-        <!-- disable body scroll which navbar is in active -->
-        <script>
+    <!-- disable body scroll which navbar is in active -->
+    <script>
         $(function () {
         $('.navbar-toggler').click(function () {
             $('body').toggleClass('noscroll');
         })
         });
-        </script>
-        <!-- disable body scroll which navbar is in active -->
-    
-        <!-- Template JavaScript -->
-        <script src="{{url_for('static',filename = 'assets/js/jquery-3.3.1.min.js')}}"></script>
-    
-        <!-- theme changer js -->
-        <script src="{{url_for('static',filename = 'assets/js/theme-change.js')}}"></script>
-        <!-- //theme changer js -->
-    
-        <!-- courses owlcarousel -->
-        <script src="{{url_for('static',filename = 'assets/js/owl.carousel.js')}}"></script>
-    
-        <!-- script for testimonials -->
-        <script>
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+
+    <!-- Template JavaScript -->
+    <script src="{{url_for('static',filename = 'assets/js/jquery-3.3.1.min.js')}}"></script>
+
+    <!-- theme changer js -->
+    <script src="{{url_for('static',filename = 'assets/js/theme-change.js')}}"></script>
+    <!-- //theme changer js -->
+
+    <!-- courses owlcarousel -->
+    <script src="{{url_for('static',filename = 'assets/js/owl.carousel.js')}}"></script>
+
+    <!-- script for testimonials -->
+    <script>
         $(document).ready(function () {
         $('.owl-testimonial').owlCarousel({
             loop: true,
@@ -232,18 +228,14 @@
             }
         })
         })
-        
     </script>
     <!-- bootstrap -->
     <script src="{{url_for('static',filename = 'assets/js/bootstrap.min.js')}}"></script>
-
     <!-- js for selct option -->
     <script src="https://kit.fontawesome.com/577845f6a5.js" 
-        
         crossorigin="anonymous">
     </script>
     <!-- Optional JavaScript -->
-    
     <script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
