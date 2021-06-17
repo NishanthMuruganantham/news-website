@@ -3,13 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sports Home</title>
+    <title>News 19 | Sports Home</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename = 'assets/images/website_logo.png')}}" />
 </head>
-
 <body>
-    <!-- header -->
     {% extends "layout.html" %}
-    <!-- {% set active_page = request.endpoint %} -->
     {% block content %}
     <div class="w3l-homeblock2 py-5">
         <div class="container pt-md-4 pb-md-5">
@@ -19,37 +17,35 @@
                 <div class="col-lg-4 col-md-6 item">
                     <div class="card" 
                     style = "border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     "
                     >
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'football')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/football.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/football.jpg')}}"
                                     alt = "Card image cap" height = "220">
-                                    
                             </a>
                         </div>
                         <div class="card-body blog-details">
                             <a href="{{url_for('general.sports_news',sport_name= 'football')}}" class="blog-desc">
                                 Football
                             </a>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'cricket')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/cricket3.jpg')}}""
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/cricket.jpg')}}""
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -57,20 +53,19 @@
                             <a href="{{url_for('general.sports_news',sport_name= 'cricket')}}" class="blog-desc">
                                 Cricket
                             </a>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'tennis')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/tennis1.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/tennis.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -78,20 +73,19 @@
                             <a href="{{url_for('general.sports_news',sport_name= 'tennis')}}" class="blog-desc">
                                 Tennis
                             </a>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'formula-1')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/Formula1.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/Formula1.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -102,17 +96,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'hockey')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/hockey.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/hockey.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -123,17 +116,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'golf')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/golf.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/golf.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -144,7 +136,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
                     border-bottom-left-radius: 10px 10px;
@@ -154,7 +145,7 @@
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'badminton')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/badminton.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/badminton.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -165,17 +156,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'chess')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/chess.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/chess.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -186,17 +176,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'kabaddi')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/kabaddi.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/kabaddi.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -207,17 +196,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'wrestling')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/wrestling.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/wrestling.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -228,17 +216,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'nba')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/nba.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/nba.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -249,17 +236,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card" style="border: 1px solid #5a67d8;
-                    border-bottom-left-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
-                    text-align:center;
+                        border-bottom-left-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
+                        text-align:center;
                     ">
                         <div class="card-header p-0 position-relative">
                             <a href="{{url_for('general.sports_news',sport_name= 'boxing')}}">
                                 <img class="card-img-bottom d-block radius-image-full" 
-                                    src = "{{url_for('static',filename = 'assets/images/boxing.jpg')}}"
+                                    src = "{{url_for('static',filename = 'assets/images/sports_home/boxing.jpg')}}"
                                     alt = "Card image cap" height = "220">
                             </a>
                         </div>
@@ -270,9 +256,7 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            
         </div>
     </div>
     {% endblock %}

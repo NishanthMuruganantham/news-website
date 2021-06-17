@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home</title>
+    <title>News 19 | Read the best today</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename = 'assets/images/website_logo.png')}}" />
 </head>
 
 <body>
@@ -13,564 +14,430 @@
     <!-- //header -->
     <!-- /homeblock1-->
     <section class="w3l-homeblock1 py-sm-5 py-4">
-    <div class="container py-md-4">
-        <div class="grids-area-hny main-cont-wthree-fea row">
-            <div class="col-lg-3 col-6 grids-feature">
-                <a href = "{{url_for('general.general_news',news_category= 'latest')}}" target = "_blank">
-                    <div class="area-box">
-                        <span class="fa">
+        <div class="container py-md-4">
+            <div class="grids-area-hny main-cont-wthree-fea row">
+                <div class="col-lg-3 col-6 grids-feature">
+                    <a href = "{{url_for('general.general_news',news_category= 'latest')}}" target = "_blank">
+                        <div class="area-box">
+                            <span class="fa">
+                                <span class="material-icons">
+                                    article
+                                    </span>
+                            </span>
+                            <h4 class="title-head">Latest</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6 grids-feature">
+                    <a href = "{{url_for('general.general_news',news_category= 'india')}}" target = "_blank">
+                        <div class="area-box">
+                            <span class = "fa">IN</span>
+                            <h4 class = "title-head">India</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
+                    <a href = "{{url_for('general.general_news',news_category= 'world')}}" target = "_blank">
+                        <div class="area-box">
+                            <span class="fa">
+                                <span class="material-icons">
+                                    public
+                                    </span>
+                            </span>
+                            <h4 class="title-head">World</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
+                    <a href = "{{url_for('general.general_news',news_category= 'entertainment')}}" target = "_blank">
+                        <div class="area-box">
+                            <span class="fa">
                             <span class="material-icons">
-                                article
-                                </span>
-                        </span>
-                        <h4 class="title-head">Latest</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-6 grids-feature">
-                <a href = "{{url_for('general.general_news',news_category= 'india')}}" target = "_blank">
-                    <div class="area-box">
-                        <span class = "fa">IN</span>
-                        <h4 class = "title-head">India</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                <a href = "{{url_for('general.general_news',news_category= 'world')}}" target = "_blank">
-                    <div class="area-box">
-                        <span class="fa">
-                            <span class="material-icons">
-                                public
-                                </span>
-                        </span>
-                        <h4 class="title-head">World</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                <a href = "{{url_for('general.general_news',news_category= 'entertainment')}}" target = "_blank">
-                    <div class="area-box">
-                        <span class="fa">
-                        <span class="material-icons">
-                            movie
-                            </span></span>
-                        <h4 class="title-head">Entertainment</h4>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-    </div>
-    <div class="container py-md-4">
-        <div class="grids-area-hny main-cont-wthree-fea row">
-            <div class="col-lg-3 col-6 grids-feature">
-                <a href="{{url_for('general.general_news',news_category= 'science')}}">
-                    <div class="area-box">
-                        <span class="fa">
-                            <span class="material-icons">
-                                science
-                                </span>
-                        </span>
-                        <h4 class="title-head">Science</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-6 grids-feature">
-                <a href="{{url_for('general.general_news',news_category= 'business')}}">
-                    <div class="area-box">
-                        <span class="fa">
-                            <span class="material-icons">
-                                business_center
-                                </span>
-                        </span>
-                        <h4 class="title-head">Business</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                <a href="#food">
-                    <div class="area-box">
-                        <!-- <span class="fa fa-trophy"></span> -->
-                        <span class="fa">
-                            <span class="material-icons">
-                                sports_cricket
+                                movie
                                 </span></span>
-                        <h4 class="title-head">Sports</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                <a href="{{url_for('general.general_news',news_category= 'offbeat')}}">
-                    <div class="area-box">
-                        <span class="fa fa-bicycle"></span>
-                        <h4 class="title-head">Offbeats</h4>
-                    </div>
-                </a>
+                            <h4 class="title-head">Entertainment</h4>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-        
-    </div>
+        <div class="container py-md-4">
+            <div class="grids-area-hny main-cont-wthree-fea row">
+                <div class="col-lg-3 col-6 grids-feature">
+                    <a href="{{url_for('general.general_news',news_category= 'science')}}" target = "_blank">
+                        <div class="area-box">
+                            <span class="fa">
+                                <span class="material-icons">
+                                    science
+                                    </span>
+                            </span>
+                            <h4 class="title-head">Science</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6 grids-feature">
+                    <a href="{{url_for('general.general_news',news_category= 'business')}}" target = "_blank">
+                        <div class="area-box">
+                            <span class="fa">
+                                <span class="material-icons">
+                                    business_center
+                                    </span>
+                            </span>
+                            <h4 class="title-head">Business</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
+                    <a href="{{url_for('general.select_sports')}}" target = "_blank">
+                        <div class="area-box">
+                            <!-- <span class="fa fa-trophy"></span> -->
+                            <span class="fa">
+                                <span class="material-icons">
+                                    sports_cricket
+                                    </span></span>
+                            <h4 class="title-head">Sports</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
+                    <a href="{{url_for('general.general_news',news_category= 'offbeat')}}" target = "_blank">
+                        <div class="area-box">
+                            <span class="fa fa-bicycle"></span>
+                            <h4 class="title-head">Offbeats</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
     </section>
     <!-- //homeblock1-->
 
     <section class="w3l-testimonials" id="testimonials">
     <!-- main-slider -->
-    <div class="testimonials pt-2 pb-5">
-        <div class="container pb-lg-5">
-            <div class="owl-testimonial owl-carousel owl-theme mb-md-0 mb-sm-5 mb-4">
-                <div class="item">
-                    <div class="row slider-info">
-                        <div class="col-lg-8 message-info align-self">
-                            <span class="label-blue mb-sm-4 mb-3">Beauty</span>
-                            <h3 class="title-big mb-4">Create an Art that shows the beauty in everyone’s ideas of flaws.
-                            </h3>
-                            <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                                sit id accusantium officia quod quasi necessitatibus perspiciatis Harum error
-                                provident quibusdam tenetur. Ut fermentum leo quis sapienet faucibus, at
-                                scelerisque sem feugiat. Nulla in eros purus.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
-                            <img src="{{url_for('static',filename = 'assets/images/beauty.jpg')}}" class="img-fluid radius-image-full" alt="client image">
-                        </div>
-                    </div>
-                </div>
-                ddf
-                <div class="item">
-                    <div class="row slider-info">
-                        <div class="col-lg-8 message-info align-self">
-                            <span class="label-blue mb-sm-4 mb-3">Fashion and Style</span>
-                            <h3 class="title-big mb-4">Addicted to Fashion is the Armor to survive the reality of
-                                Everyday Life.
-                            </h3>
-                            <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                                sit id accusantium officia quod quasi necessitatibus perspiciatis Harum error
-                                provident quibusdam tenetur. Ut fermentum leo quis sapienet faucibus, at
-                                scelerisque sem feugiat. Nulla in eros purus.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
-                            <img src="{{url_for('static',filename = 'assets/images/fashion.jpg')}}" class="img-fluid radius-image-full" alt="client image">
+        <div class="testimonials pt-2 pb-5">
+            <div class="container pb-lg-5">
+                <div class="owl-testimonial owl-carousel owl-theme mb-md-0 mb-sm-5 mb-4">
+                    <div class="item">
+                        <div class="row slider-info">
+                            <div class="col-lg-8 message-info align-self">
+                                <span class="label-blue mb-sm-4 mb-3">India</span>
+                                <h3 class="title-big mb-4">
+                                    {{home_india_news[0]['headline']}}
+                                </h3>
+                                <p class="message">
+                                    {{home_india_news[0]['description']}}
+                                </p>
+                            </div>
+                            <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
+                                <img src="{{home_india_news[0]['image_url']}}" 
+                                class="img-fluid radius-image-full" alt="client image" 
+                                height = "200" 
+                                style="
+                                    padding-top: 1px;
+                                    border-radius: 25px;
+                                    padding-bottom: 1px;
+                                    height: 282px;
+                                    margin-top: 70px;
+                                    width: 500px;
+                                ">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="row slider-info">
-                        <div class="col-lg-8 message-info align-self">
-                            <span class="label-blue mb-sm-4 mb-3">Food and Wellness</span>
-                            <h3 class="title-big mb-4">Create healthy habits, not restrictions. Wellness is a taste of
-                                being.
-                            </h3>
-                            <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                                sit id accusantium officia quod quasi necessitatibus perspiciatis Harum error
-                                provident quibusdam tenetur. Ut fermentum leo quis sapienet faucibus, at
-                                scelerisque sem feugiat. Nulla in eros purus.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
-                            <img src="{{url_for('static',filename = 'assets/images/food.jpg')}}" class="img-fluid radius-image-full" alt="client image">
+                    <div class="item">
+                        <div class="row slider-info">
+                            <div class="col-lg-8 message-info align-self">
+                                <span class="label-blue mb-sm-4 mb-3">World</span>
+                                <h3 class="title-big mb-4">
+                                    {{home_world_news[0]['headline']}}
+                                </h3>
+                                <p class="message">
+                                    {{home_world_news[0]['description']}}
+                                </p>
+                            </div>
+                            <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
+                                <img src="{{home_world_news[0]['image_url']}}" 
+                                class="img-fluid radius-image-full" alt="client image" 
+                                height = "200" 
+                                style="
+                                    padding-top: 1px;
+                                    border-radius: 25px;
+                                    padding-bottom: 1px;
+                                    height: 282px;
+                                    margin-top: 70px;
+                                    width: 500px;
+                                ">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="row slider-info">
-                        <div class="col-lg-8 message-info align-self">
-                            <span class="label-blue mb-sm-4 mb-3">Lifestyle</span>
-                            <h3 class="title-big mb-4">To succeed in Life, you need 3 things : a wishbone, a backbone, a
-                                funny bone.
-                            </h3>
-                            <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                                sit id accusantium officia quod quasi necessitatibus perspiciatis Harum error
-                                provident quibusdam tenetur. Ut fermentum leo quis sapienet faucibus, at
-                                scelerisque sem feugiat. Nulla in eros purus.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
-                            <img src="{{url_for('static',filename = 'assets/images/lifestyle.jpg')}}" class="img-fluid radius-image-full"
-                                alt="client image">
+                    <div class="item">
+                        <div class="row slider-info">
+                            <div class="col-lg-8 message-info align-self">
+                                <span class="label-blue mb-sm-4 mb-3">Business</span>
+                                <h3 class="title-big mb-4">
+                                    {{home_business_news[0]['headline']}}
+                                </h3>
+                                <p class="message">
+                                    {{home_business_news[0]['description']}}
+                                </p>
+                            </div>
+                            <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
+                                <img src="{{home_business_news[0]['image_url']}}" 
+                                class="img-fluid radius-image-full" alt="client image" 
+                                height = "200" 
+                                style="
+                                    padding-top: 1px;
+                                    border-radius: 25px;
+                                    padding-bottom: 1px;
+                                    height: 282px;
+                                    margin-top: 70px;
+                                    width: 500px;
+                                ">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- /main-slider -->
     </section>
-    <div class="w3l-homeblock2 py-5">
-    <div class="container py-lg-5 py-md-4">
-        <!-- block -->
-        <div class="row">
-            <div class="col-lg-8">
-                <h3 class="section-title-left mb-4"> Editor's Pick </h3>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 item">
-                        <div class="card">
-                            <div class="card-header p-0 position-relative">
-                                <a href="#blog-single.html">
-                                    <img class="card-img-bottom d-block radius-image-full"
-                                        src="{{url_for('static',filename = 'assets/images/image1.jpg')}}" alt="Card image cap">
-                                </a>
+    <!-- Just in News Short Intro -->
+    <div class="w3l-homeblock2 py-2">
+        <div class="container py-lg-5 py-md-4">
+            <!-- block -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3 class="section-title-left mb-4"> Just In </h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 item">
+                            <div class="card">
+                                <div class="card-header p-0 position-relative">
+                                    <a href="{{home_latest_news[0]['url']}}" target = "_blank">
+                                        <img class="card-img-bottom d-block radius-image-full"
+                                            src="{{home_latest_news[0]['image_url']}}" alt="Card image cap">
+                                    </a>
+                                </div>
+                                <div class="card-body blog-details">
+                                    <span class="label-blue">Latest</span>
+                                    <a href="{{home_latest_news[0]['url']}}" target = "_blank" class="blog-desc">
+                                        {{home_latest_news[0]["headline"]}}
+                                    </a>
+                                    <div class="align-items-center mt-3 mb-3">
+                                        <ul>
+                                            <li style="color:#5a67d8">
+                                                <span class="meta-value"> 
+                                                    {% if home_latest_news[0]["posted_date"]%}
+                                                        {{home_latest_news[0]["posted_date"].strftime('%B %d, %Y')}} 
+                                                    {% endif %}
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        {{home_latest_news[0]["description"]}}
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-body blog-details">
-                                <span class="label-blue">Beauty</span>
-                                <a href="#blog-single.html" class="blog-desc">The 3 Eyeshadow palettes I own & How to
-                                    downsize your stash
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur ipsum adipisicing elit. Quis
-                                    vitae sit.</p>
-                                <div class="author align-items-center mt-3 mb-1">
-                                    <img src="{{url_for('static',filename = 'assets/images/a1.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <a href="author.html">Isabella ava</a> </a>
-                                        </li>
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"> July 13, 2020 </span>. <span
-                                                class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                        </li>
-                                    </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mt-md-0 mt-sm-5 mt-4">
+                            <div class="card">
+                                <div class="card-header p-0 position-relative">
+                                    <a href="{{home_latest_news[1]['url']}}" target = "_blank">
+                                        <img class="card-img-bottom d-block radius-image-full"
+                                            src="{{home_latest_news[1]['image_url']}}" alt="Card image cap">
+                                    </a>
+                                </div>
+                                <div class="card-body blog-details">
+                                    <span class="label-blue">Latest</span>
+                                    <a href="{{home_latest_news[1]['url']}}" target = "_blank" class="blog-desc">
+                                        {{home_latest_news[1]["headline"]}}
+                                    </a>
+                                    <div class="align-items-center mt-3 mb-3">
+                                        <ul>
+                                            <li style="color:#5a67d8">
+                                                <span class="meta-value"> 
+                                                    {% if home_latest_news[1]["posted_date"]%}
+                                                        {{home_latest_news[1]["posted_date"].strftime('%B %d, %Y')}} 
+                                                    {% endif %}
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        {{home_latest_news[1]["description"]}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 mt-md-0 mt-sm-5 mt-4">
-                        <div class="card">
-                            <div class="card-header p-0 position-relative">
-                                <a href="#blog-single.html">
-                                    <img class="card-img-bottom d-block radius-image-full"
-                                        src="{{url_for('static',filename = 'assets/images/image2.jpg')}}" alt="Card image cap">
-                                </a>
+                </div>
+                <!-- Topics Section -->
+                <div class="col-lg-4 trending mt-lg-0 mt-5">
+                    <div class="topics">
+                        <h3 class="section-title-left mb-4"> Topics</h3>
+                        
+                        <a href="{{url_for('general.general_news',news_category= 'latest')}}" target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class="fa">
+                                    <span class="material-icons">
+                                        article
+                                        </span>
+                                </span>
+                                <h4>Latest</h4>
                             </div>
-                            <div class="card-body blog-details">
-                                <span class="label-blue">Fashion</span>
-                                <a href="#blog-single.html" class="blog-desc">2 New outfit formulas to add to your
-                                    Capsule Wardrobe
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur ipsum adipisicing elit. Quis
-                                    vitae sit.</p>
-                                <div class="author align-items-center mt-3 mb-1">
-                                    <img src="{{url_for('static',filename = 'assets/images/a2.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <a href="author.html">Charlotte mia</a> </a>
-                                        </li>
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"> July 13, 2020 </span>. <span
-                                                class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        </a>
+                        <a href="{{url_for('general.general_news',news_category= 'india')}}" target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class = "fa">IN</span>
+                                <h4>India</h4>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 left-right bg-clr-white p-3">
-                    <h3 class="section-title-left align-self pl-2 mb-sm-0 mb-3">Advertise with us </h3>
-                    <a class="btn btn-style btn-primary" href="#url">Learn more</a>
-                </div>
-            </div>
-            <div class="col-lg-4 trending mt-lg-0 mt-5">
-                <div class="topics">
-                    <h3 class="section-title-left mb-4"> Topics</h3>
-                    <a href="beauty.html" class="topics-list">
-                        <div class="list1">
-                            <span class="fa fa-bath"></span>
-                            <h4>Beauty</h4>
-                        </div>
-                    </a>
-                    <a href="fashion.html" class="topics-list mt-3">
-                        <div class="list1">
-                            <span class="fa fa-female"></span>
-                            <h4>Fashion and style</h4>
-                        </div>
-                    </a>
-                    <a href="#food" class="topics-list mt-3">
-                        <div class="list1">
-                            <span class="fa fa-cutlery"></span>
-                            <h4>Food and wellness</h4>
-                        </div>
-                    </a>
-                    <a href="#lifestyle" class="topics-list mt-3">
-                        <div class="list1">
-                            <span class="fa fa-pie-chart"></span>
-                            <h4>Lifestyle</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="sponsers mt-5">
-                    <h3 class="section-title-left mb-4"> Our sponsers</h3>
-                    <a href="#ad-banner"><img src="{{url_for('static',filename = 'assets/images/ad.jpg')}}" alt="" class="img-fluid radius-image-full" /></a>
-                    <a href="#advertise" class="text-center d-block text-uppercase">Advertise with us </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="w3l-homeblock3 py-5">
-    <div class="container py-lg-5 py-md-4">
-        <h3 class="section-title-left mb-4"> Top Pick's of this month </h3>
-        <div class="row top-pics">
-            <div class="col-lg-4 col-md-6">
-                <div class="top-pic1">
-                    <div class="card-body blog-details">
-                        <a href="#blog-single.html" class="blog-desc">Fashion is
-                            Creating your Beauty image. The New fashion starts here
                         </a>
-                        <div class="author align-items-center">
-                            <img src="{{url_for('static',filename = 'assets/images/a1.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="author.html">Isabella ava</a> </a>
-                                </li>
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> July 13, 2020 </span>. <span
-                                        class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                <div class="top-pic2">
-                    <div class="card-body blog-details">
-                        <a href="#blog-single.html" class="blog-desc">The 5 Nonnegotiables of a Healthy Quarantine food that a Doctor Approved
+                        <a href="{{url_for('general.general_news',news_category= 'world')}}" target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class="fa">
+                                    <span class="material-icons">
+                                        public
+                                        </span>
+                                </span>
+                                <h4>World</h4>
+                            </div>
                         </a>
-                        <div class="author align-items-center">
-                            <img src="{{url_for('static',filename = 'assets/images/a2.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="author.html">Charlotte mia</a> </a>
-                                </li>
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> July 13, 2020 </span>. <span
-                                        class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
-                <div class="top-pic3">
-                    <div class="card-body blog-details">
-                        <a href="#blog-single.html" class="blog-desc"> Right food baked with natural ingredient, the use of best quality products
+                        <a href="{{url_for('general.general_news',news_category= 'science')}}"  target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class="fa">
+                                    <span class="material-icons">
+                                        science
+                                        </span>
+                                </span>
+                                <h4>Science</h4>
+                            </div>
                         </a>
-                        <div class="author align-items-center">
-                            <img src="{{url_for('static',filename = 'assets/images/a3.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="author.html">Elizabeth</a> </a>
-                                </li>
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> July 13, 2020 </span>. <span
-                                        class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                </li>
-                            </ul>
-                        </div>
+                        <a href="{{url_for('general.general_news',news_category= 'business')}}" target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class="fa">
+                                    <span class="material-icons">
+                                        business_center
+                                        </span>
+                                </span>
+                                <h4>Business</h4>
+                            </div>
+                        </a>
+                        <a href="{{url_for('general.general_news',news_category= 'entertainment')}}" target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class="fa">
+                                    <span class="fa">
+                                        <span class="material-icons">
+                                            movie
+                                            </span></span>
+                                </span>
+                                <h4>Entertainment</h4>
+                            </div>
+                        </a>
+                        
+                        <a href="{{url_for('general.select_sports')}}" target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class="fa">
+                                    <span class="material-icons">
+                                        sports_cricket
+                                        </span></span>
+                                <h4>Sports</h4>
+                            </div>
+                        </a>
+                        <a href="{{url_for('general.general_news',news_category= 'offbeat')}}" target = "_blank" class="topics-list mt-3">
+                            <div class="list1">
+                                <span class="fa fa-bicycle"></span>
+                                <h4>Offbeats</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <div class="w3l-homeblock2 py-5">
-    <div class="container py-lg-5 py-md-4">
-        <!-- block -->
-        <div class="left-right">
-            <h3 class="section-title-left mb-sm-4 mb-2"> Fashion and style</h3>
-            <a href="fashiom.html" class="more btn btn-small mb-sm-0 mb-4">View more</a>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 item">
-                <div class="card">
-                    <div class="card-header p-0 position-relative">
-                        <a href="#blog-single.html">
-                            <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/fashion1.jpg')}}"
-                                alt="Card image cap">
-                        </a>
-                    </div>
-                    <div class="card-body blog-details">
-                        <a href="#blog-single.html" class="blog-desc">An easy Guide to buying Denim & My favourite styles
-                        </a>
-                        <div class="author align-items-center">
-                            <img src="{{url_for('static',filename = 'assets/images/a1.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="author.html">Isabella ava</a> </a>
-                                </li>
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> July 13, 2020 </span>. <span
-                                        class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <!-- India News Short Intro -->
+    <div class="w3l-homeblock2 py-2">
+        <div class="container py-lg-5 py-md-4">
+            <!-- block -->
+            <div class="left-right">
+                <h3 class="section-title-left mb-sm-4 mb-2">India News</h3>
+                <a href="{{url_for('general.general_news',news_category= 'india')}}" class="more btn btn-small mb-sm-0 mb-4" target = "_blank">View more</a>
             </div>
-            <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative">
-                        <a href="#blog-single.html">
-                            <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/fashion2.jpg')}}"
-                                alt="Card image cap">
-                        </a>
-                    </div>
-                    <div class="card-body blog-details">
-                        <a href="#blog-single.html" class="blog-desc">The Satin Skirt & How to Wear it all year round fashion
-                        </a>
-                        <div class="author align-items-center">
-                            <img src="{{url_for('static',filename = 'assets/images/a2.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="author.html">Charlotte mia</a> </a>
-                                </li>
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> July 13, 2020 </span>. <span
-                                        class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative">
-                        <a href="#blog-single.html">
-                            <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/fashion3.jpg')}}"
-                                alt="Card image cap">
-                        </a>
-                    </div>
-                    <div class="card-body blog-details">
-                        <a href="#blog-single.html" class="blog-desc">What I’ll be Wearing this Party Season & the Festive edit
-                        </a>
-                        <div class="author align-items-center">
-                            <img src="{{url_for('static',filename = 'assets/images/a3.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="author.html">Elizabeth</a> </a>
-                                </li>
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> July 13, 2020 </span>. <span
-                                        class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="w3l-homeblock2 w3l-homeblock5 py-5">
-    <div class="container py-lg-5 py-md-4">
-        <!-- block -->
-        <div class="left-right">
-            <h3 class="section-title-left mb-sm-4 mb-2"> Beauty</h3>
-            <a href="beauty.html" class="more btn btn-small mb-sm-0 mb-4">View more</a>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="bg-clr-white hover-box">
-                    <div class="row">
-                        <div class="col-sm-5 position-relative">
-                            <a href="#blog-single.html" class="image-mobile">
-                                <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/beauty1.jpg')}}"
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_india_news[1]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_india_news[1]['image_url']}}"
                                     alt="Card image cap">
                             </a>
                         </div>
-                        <div class="col-sm-7 card-body blog-details align-self">
-                            <a href="#blog-single.html" class="blog-desc">Natural Spa - Where you feel unique and special
+                        <div class="card-body blog-details">
+                            <a href="{{home_india_news[1]['url']}}" class="blog-desc" target = "_blank">
+                                {{home_india_news[1]["headline"]}}
                             </a>
-                            <div class="author align-items-center">
-                                <img src="{{url_for('static',filename = 'assets/images/a1.jpg')}}" alt="" class="img-fluid rounded-circle" />
+                            <div class="align-items-center mt-1 mb-3">
                                 <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Isabella ava</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_india_news[1]["posted_date"]%}
+                                                {{home_india_news[1]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 mt-lg-0 mt-4">
-                <div class="bg-clr-white hover-box">
-                    <div class="row">
-                        <div class="col-sm-5 position-relative">
-                            <a href="#blog-single.html" class="image-mobile">
-                                <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/beauty2.jpg')}}"
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_india_news[2]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_india_news[2]['image_url']}}"
                                     alt="Card image cap">
                             </a>
                         </div>
-                        <div class="col-sm-7 card-body blog-details align-self">
-                            <a href="#blog-single.html" class="blog-desc">How to get Beautiful coloring Highlights this weak
+                        <div class="card-body blog-details">
+                            <a href="{{home_india_news[2]['url']}}" target = "_blank" class="blog-desc">
+                                {{home_india_news[2]["headline"]}}
                             </a>
-                            <div class="author align-items-center">
-                                <img src="{{url_for('static',filename = 'assets/images/a2.jpg')}}" alt="" class="img-fluid rounded-circle" />
+                            <div class="align-items-center mt-1 mb-3" >
                                 <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Charlotte mia</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_india_news[2]["posted_date"]%}
+                                                {{home_india_news[2]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 mt-4">
-                <div class="bg-clr-white hover-box">
-                    <div class="row">
-                        <div class="col-sm-5 position-relative">
-                            <a href="#blog-single.html" class="image-mobile">
-                                <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/beauty3.jpg')}}"
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_india_news[3]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_india_news[3]['image_url']}}"
                                     alt="Card image cap">
                             </a>
                         </div>
-                        <div class="col-sm-7 card-body blog-details align-self">
-                            <a href="#blog-single.html" class="blog-desc">New Hair Styles can look fabulous and shiny
+                        <div class="card-body blog-details">
+                            <a href="{{home_india_news[3]['url']}}" target = "_blank" class="blog-desc">
+                                {{home_india_news[3]["headline"]}}
                             </a>
-                            <div class="author align-items-center">
-                                <img src="assets/images/a3.jpg" alt="" class="img-fluid rounded-circle" />
+                            <div class="align-items-center mt-1 mb-3">
                                 <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Elizabeth</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mt-4">
-                <div class="bg-clr-white hover-box">
-                    <div class="row">
-                        <div class="col-sm-5 position-relative">
-                            <a href="#blog-single.html" class="image-mobile">
-                                <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/beauty4.jpg')}}"
-                                    alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="col-sm-7 card-body blog-details align-self">
-                            <a href="#blog-single.html" class="blog-desc">How our dreams should shine and spray beauty to us.</a>
-                            <div class="author align-items-center">
-                                <img src="{{url_for('static',filename = 'assets/images/a1.jpg')}}" alt="" class="img-fluid rounded-circle" />
-                                <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Isabella ava</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_india_news[3]["posted_date"]%}
+                                                {{home_india_news[3]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -580,66 +447,90 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="w3l-homeblock2 w3l-homeblock6 py-5">
-    <div class="container-fluid px-sm-5 py-lg-5 py-md-4">
-        <!-- block -->
-            <h3 class="section-title-left mb-4"> Trending Now</h3>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="bg-clr-white hover-box">
-                    <div class="row">
-                        <div class="col-sm-6 position-relative">
-                            <a href="#blog-single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/trending1.jpg')}}"
+    <!-- World News Short Intro -->
+    <div class="w3l-homeblock2 py-2">
+        <div class="container py-lg-5 py-md-4">
+            <!-- block -->
+            <div class="left-right">
+                <h3 class="section-title-left mb-sm-4 mb-2">World News</h3>
+                <a href="{{url_for('general.general_news',news_category= 'world')}}" class="more btn btn-small mb-sm-0 mb-4" target = "_blank">View more</a>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_world_news[1]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_world_news[1]['image_url']}}"
                                     alt="Card image cap">
                             </a>
                         </div>
-                        <div class="col-sm-6 card-body blog-details align-self">
-                            <span class="label-blue">Sports</span>
-                            <a href="#blog-single.html" class="blog-desc">Playing footbal with your feet is one thing.
+                        <div class="card-body blog-details">
+                            <a href="{{home_world_news[1]['url']}}" class="blog-desc" target = "_blank">
+                                {{home_world_news[1]["headline"]}}
                             </a>
-                            <p>Lorem ipsum dolor sit amet consectetur ipsum adipisicing elit. Quis
-                                vitae sit.</p>
-                            <div class="author align-items-center mt-3">
-                                <img src="{{url_for('static',filename = 'assets/images/a2.jpg')}}" alt="" class="img-fluid rounded-circle" />
+                            <div class="align-items-center mt-1 mb-3">
                                 <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Charlotte mia</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_world_news[1]["posted_date"]%}
+                                                {{home_world_news[1]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 mt-lg-0 mt-4">
-                <div class="bg-clr-white hover-box">
-                    <div class="row">
-                        <div class="col-sm-6 position-relative">
-                            <a href="#blog-single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="{{url_for('static',filename = 'assets/images/trending2.jpg')}}"
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_world_news[2]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_world_news[2]['image_url']}}"
                                     alt="Card image cap">
                             </a>
                         </div>
-                        <div class="col-sm-6 card-body blog-details align-self">
-                            <span class="label-blue">Fitness</span>
-                            <a href="#blog-single.html" class="blog-desc">Experience the state of the art fitness! Fitness on Track </a>
-                            <p>Lorem ipsum dolor sit amet consectetur ipsum adipisicing elit. Quis
-                                vitae sit.</p>
-                            <div class="author align-items-center mt-3">
-                                <img src="{{url_for('static',filename = 'assets/images/a3.jpg')}}" alt="" class="img-fluid rounded-circle" />
+                        <div class="card-body blog-details">
+                            <a href="{{home_world_news[2]['url']}}" class="blog-desc" target = "_blank">
+                                {{home_world_news[2]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
                                 <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">ELizabeth</a> </a>
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_world_news[2]["posted_date"]%}
+                                                {{home_world_news[2]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
                                     </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_world_news[3]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_world_news[3]['image_url']}}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="{{home_world_news[3]['url']}}" class="blog-desc" target = "_blank">
+                                {{home_world_news[3]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_world_news[3]["posted_date"]%}
+                                                {{home_world_news[3]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -649,8 +540,193 @@
             </div>
         </div>
     </div>
+    <!-- Business News Short Intro -->
+    <div class="w3l-homeblock2 py-2">
+        <div class="container py-lg-5 py-md-4">
+            <!-- block -->
+            <div class="left-right">
+                <h3 class="section-title-left mb-sm-4 mb-2">Business News</h3>
+                <a href="{{url_for('general.general_news',news_category= 'business')}}" class="more btn btn-small mb-sm-0 mb-4" target = "_blank">View more</a>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_business_news[1]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_business_news[1]['image_url']}}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="{{home_business_news[1]['url']}}" class="blog-desc" target = "_blank">
+                                {{home_business_news[1]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_business_news[1]["posted_date"]%}
+                                                {{home_business_news[1]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_business_news[2]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_business_news[2]['image_url']}}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="{{home_business_news[2]['url']}}" target = "_blank" class="blog-desc">
+                                {{home_business_news[2]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_business_news[2]["posted_date"]%}
+                                                {{home_business_news[2]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_business_news[3]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_business_news[3]['image_url']}}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="{{home_business_news[3]['url']}}" class="blog-desc" target = "_blank">
+                                {{home_business_news[3]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_business_news[3]["posted_date"]%}
+                                                {{home_business_news[3]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+    <!-- Sports News Short Intro -->
+    <div class="w3l-homeblock2 py-2">
+        <div class="container py-lg-5 py-md-4">
+            <!-- block -->
+            <div class="left-right">
+                <h3 class="section-title-left mb-sm-4 mb-2">Sports News</h3>
+                <a href="{{url_for('general.select_sports')}}" target = "_blank" class="more btn btn-small mb-sm-0 mb-4">View more</a>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative" target = "_blank">
+                            <a href="{{home_football_news[0]['url']}}">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_football_news[0]['image_url']}}" target = "_blank"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="{{home_football_news[0]['url']}}" target = "_blank" class="blog-desc">
+                                {{home_football_news[0]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_football_news[0]["posted_date"]%}
+                                                {{home_football_news[0]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_cricket_news[0]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_cricket_news[0]['image_url']}}" target = "_blank"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="{{home_cricket_news[0]['url']}}" target = "_blank" class="blog-desc">
+                                {{home_cricket_news[0]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_cricket_news[0]["posted_date"]%}
+                                                {{home_cricket_news[0]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="{{home_tennis_news[0]['url']}}" target = "_blank">
+                                <img class="card-img-bottom d-block radius-image-full" 
+                                src="{{home_tennis_news[0]['image_url']}}" target = "_blank"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <a href="{{home_tennis_news[0]['url']}}" target = "_blank" class="blog-desc">
+                                {{home_tennis_news[0]["headline"]}}
+                            </a>
+                            <div class="align-items-center mt-1 mb-3">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson" style="color:#5a67d8">
+                                        <span class="meta-value"> 
+                                            {% if home_tennis_news[0]["posted_date"]%}
+                                                {{home_tennis_news[0]["posted_date"].strftime('%B %d, %Y')}} 
+                                            {% endif %}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     {% endblock %}
 </body>
 
