@@ -9,7 +9,7 @@ core = Blueprint("core", __name__)
 @core.route("/")
 def index():
     
-    uri = "https://ndtvnews-api.herokuapp.com/{}?{}=values({})"
+    uri = "https://ndtvapi.vercel.app/{}?{}=values({})"
     
     home_latest_news = fetch_general_news(uri = uri.format("general", "category", "latest"))
     home_india_news = fetch_general_news(uri = uri.format("general", "category", "india"))
