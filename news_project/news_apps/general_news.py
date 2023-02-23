@@ -10,7 +10,7 @@ general = Blueprint("general", __name__)
 @general.route("/<news_category>", methods=["GET", "POST"])
 def general_news(news_category):
     
-    uri = f"https://ndtvnews-api.herokuapp.com/general?category=values({news_category})"
+    uri = f"https://ndtvapi.vercel.app/general?category=values({news_category})"
     print(uri)
     news_list = fetch_general_news(uri)
     
@@ -54,7 +54,7 @@ def select_sports():
 @general.route("/sports/<sport_name>", methods=["GET", "POST"])
 def sports_news(sport_name):
     
-    uri = f"https://ndtvnews-api.herokuapp.com/sports?sport=values({sport_name})"
+    uri = f"https://ndtvapi.vercel.app/sports?sport=values({sport_name})"
     print(uri)
     news_list = fetch_general_news(uri)
     
@@ -99,9 +99,9 @@ def sports_news(sport_name):
 def city_news(city_name):
     
     if city_name is not None:
-        uri = f"https://ndtvnews-api.herokuapp.com/cities?city=values({city_name})"
+        uri = f"https://ndtvapi.vercel.app/cities?city=values({city_name})"
     else:
-        uri = "https://ndtvnews-api.herokuapp.com/cities"
+        uri = "https://ndtvapi.vercel.app/cities"
         city_name = "city"
     print(uri)
     news_list = fetch_general_news(uri)
